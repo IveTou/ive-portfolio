@@ -7,22 +7,41 @@
     <meta name="keywords" content="Front-End, Software, Developer, Game, Data Science, Machine learning, Recommendation Systems">
     <meta name="author" content="Ive Santos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="canonical" href="https://">check it out https://letsencrypt.org/pt-br/ -->
   </head>
   <body>
-    <header>
-      <span>IveDev</span>
-      <nav>
-        <ul>
-          <li><a href="/html/">Peronal</a> |</li>
-          <li><a href="/css/">Tests</a> |</li>
-          <li><a href="/js/">Cases</a> |</li>
-        </ul>
-      </nav>
+    <header class="main-header">
+      <div>
+        <span class="header-icon"><a href="#introduction">IveDev</a></span>
+        <nav>
+          <div>
+            <ul>
+              <li><a href="#personal">Personal</a> |</li>
+              <li><a href="#cases">Cases</a> | </li>
+              <li><a href="#tests">Tests</a></li>
+            </ul>
+          </div>
+          <div class="header-actions">
+            <div>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div>
+              <span>En-us</span>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section>
-        <h1>The Ive's Professional Protfolio</h1>
-        <p>Hi, I'm Ive! I'm a Brazilian software developer with broad experience in software
+    <main class="content">
+      <section id="introduction">
+        <h1>Ive the Front-End Engineer page!</h1>
+        <i>But I can do much more...</i>
+        <p>
+          Hi, I'm Ive! I'm a Brazilian software developer with broad experience in software
           development. The projects I've been involved in throughout my career vary from game
           development to research in machine learning. I'm passionate about learning new technologies
           and sharing my knowledge, whether through teaching or mentoring by example. Here, I want
@@ -31,46 +50,64 @@
           to explore and contact me to share your thoughts.
         </p>
       </section>
-      <section>
+      <section id="personal">
+        <h2>Personal Projects</h2>
         <article>
           <figure>
             <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
           </figure>
-          <div>
-            <h2> Project name</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis vestibulum diam, sit amet iaculis eros tincidunt eu. In porttitor auctor mattis. Quisque id mi sed risus finibus faucibus sed ac dolor. Etiam vitae ligula purus. Aenean euismod aliquam felis. Quisque iaculis ligula ut blandit varius. Nullam fringilla, felis et tempor fermentum, mauris justo facilisis lectus, eget sodales nibh ligula et dui. </p>
-          </div>
+          <header>
+            <h3> Project name</h3>
+            <p> Year</p>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis
+            vestibulum diam, sit amet iaculis eros tincidunt eu. In porttitor auctor mattis.
+            Quisque id mi sed risus finibus faucibus sed ac dolor. Etiam vitae ligula purus.
+            Aenean euismod aliquam felis. Quisque iaculis ligula ut blandit varius.
+            Nullam fringilla, felis et tempor fermentum, mauris justo facilisis lectus,
+            eget sodales nibh ligula et dui.
+          </p>
+          <a href="">Source Code</a>
         </article>
       </section>
+      <section id="tests">
+        <h2>Coding Tests</h2>
+      </section>
+      <section id="cases">
+        <h2>Cases</h2>
+      </section>
     </main>
-    <footer>
-      <section>
+    <footer class="content">
+      <article>
         <h2> Metrics</h2>
         <p>Updated at <time datetime="2024-03-14 20:00">14th April, 2024</time></p>
-        <div>
-          <h3>LCP</h3>
-          <details>
-            <summary>Largest Contentful Paint</summary>
-            <p>Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.</p>
-          </details>
-        </div>
-        <div>
-          <h3>INP</h3>
-          <details>
-            <summary>Interaction To Next Paint</summary>
-            <p>Measures responsiveness. To provide a good user experience, strive to have an INP of less than 200 milliseconds.</p>
-          </details>
-        </div>
-        <div>
-          <h3>CLS</h3>
-          <details>
-            <summary>Cumulative Layout Shift</summary>
-            <p>Measures visual stability. To provide a good user experience, strive to have a CLS score of less than 0.1.</p>
-          </details>
-        </div>
+        <section>
+          <div>
+            <h3>LCP</h3>
+            <details>
+              <summary>Largest Contentful Paint</summary>
+              <p>Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.</p>
+            </details>
+          </div>
+          <div>
+            <h3>INP</h3>
+            <details>
+              <summary>Interaction To Next Paint</summary>
+              <p>Measures responsiveness. To provide a good user experience, strive to have an INP of less than 200 milliseconds.</p>
+            </details>
+          </div>
+          <div>
+            <h3>CLS</h3>
+            <details>
+              <summary>Cumulative Layout Shift</summary>
+              <p>Measures visual stability. To provide a good user experience, strive to have a CLS score of less than 0.1.</p>
+            </details>
+          </div>
+        </section>
         <p>Reference: <cite><a href='https://developers.google.com/search/docs/appearance/core-web-vitals'>Understanding Core Web Vitals and Google search results</a></cite></p>
-      </section>
+      </article>
     </footer>
   </body>
 </html>
