@@ -18,9 +18,9 @@
         <nav>
           <div>
             <ul>
-              <li><a href="#personal">Personal</a> |</li>
-              <li><a href="#cases">Cases</a> | </li>
-              <li><a href="#tests">Tests</a></li>
+              <li><a href="#personal" data-i18n="nav.personal"></a> |</li>
+              <li><a href="#cases" data-i18n="nav.cases"></a> | </li>
+              <li><a href="#tests" data-i18n="nav.tests"></a></li>
             </ul>
           </div>
           <div class="header-actions">
@@ -31,7 +31,8 @@
               </label>
             </div>
             <div>
-              <span>En-us</span>
+              <span>en-us</span>
+              <span>pt-br</span>
             </div>
           </div>
         </nav>
@@ -40,13 +41,14 @@
     <main>
       <section class="content" id="introduction">
         <div>
-          <h1>Ive's developer page!</h1>
+          <h1 data-i18n="intro.title"></h1>
           <p id="presentation"></p>
-          <i>..and I kinda like <a href="https://en.wikipedia.org/wiki/Palindrome">palindromes...</a></i>
+          <i data-i18n="intro.title-i">
+            <a data-i18n="intro.title-link" href="https://en.wikipedia.org/wiki/Palindrome"></a>
+          </i>
           <address>
             <p>
-              <strong>Feel free to delve in and reach
-                out to share your thoughts.</strong>
+              <strong data-i18n="intro.addres-title"></strong>
             </p>
             <a href="https://www.linkedin.com/in/ive-tourinho/">🔗 <strong>in/ive-tourinho/</strong></a>
             <a href="mailto:ivetourinho@gmail.com">📧 <strong>ivetourinho@gmail.com</strong></a>
@@ -57,7 +59,7 @@
         </div>
       </section>
       <section class="content" id="personal">
-        <h2>Personal Projects</h2>
+        <h2  data-i18n="personal.title"></h2>
         <article>
           <figure>
             <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
@@ -81,43 +83,43 @@
         </article>
       </section>
       <section class="content" id="tests">
-        <h2>Coding Tests</h2>
+        <h2 data-i18n="tests.title"></h2>
       </section>
       <section class="content" id="cases">
-        <h2>Cases</h2>
+        <h2 data-i18n="cases.title"></h2>
       </section>
     </main>
     <footer >
       <article class="content">
-        <h2> Metrics</h2>
-        <p>Updated at <time datetime="2024-03-14 20:00">14th April, 2024</time></p>
+        <h2 data-i18n="metrics.title"></h2>
+        <p><span data-i18n="metrics.updated"></span><time datetime="2024-03-14 20:00">14th April, 2024</time></p>
         <section>
           <div>
             <h3>LCP</h3>
             <details>
               <summary>Largest Contentful Paint</summary>
-              <p>Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.</p>
+              <p data-i18n="metrics.lcp"></p>
             </details>
           </div>
           <div>
             <h3>INP</h3>
             <details>
               <summary>Interaction To Next Paint</summary>
-              <p>Measures responsiveness. To provide a good user experience, strive to have an INP of less than 200 milliseconds.</p>
+              <p data-i18n="metrics.inp"></p>
             </details>
           </div>
           <div>
             <h3>CLS</h3>
             <details>
               <summary>Cumulative Layout Shift</summary>
-              <p>Measures visual stability. To provide a good user experience, strive to have a CLS score of less than 0.1.</p>
+              <p data-i18n="metrics.cls"></p>
             </details>
           </div>
         </section>
         <p>Reference: <cite><a href='https://developers.google.com/search/docs/appearance/core-web-vitals'>Understanding Core Web Vitals and Google search results</a></cite></p>
       </article>
       <section>
-        <p>Powered by Ive</p>
+        <p>Powered by Ive + Jvascript + HTML + CSS </p>
       </section>
     </footer>
     <script src="./scripts.js"></script>
