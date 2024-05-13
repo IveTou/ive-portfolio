@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ive Portfolio</title>
+    <title>Ive's Portfolio</title>
     <meta charset="UTF-8">
     <meta name="description" content="Ive professional portfolio page">
     <meta name="keywords" content="Front-End, Software, Developer, Game, Data Science, Machine learning, Recommendation Systems">
     <meta name="author" content="Ive Santos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/ive-logo.png">
     <!-- <link rel="canonical" href="https://">check it out https://letsencrypt.org/pt-br/ -->
   </head>
   <body>
     <header class="main-header">
       <div>
-        <span class="header-icon"><a href="#introduction">IveDev</a></span>
+        <a class="header-icon" href="#introduction"><img src="./public/ive-logo.png"></a>
         <nav>
           <div>
             <ul>
@@ -36,51 +37,65 @@
         </nav>
       </div>
     </header>
-    <main class="content">
-      <section id="introduction">
-        <h1>Ive the Front-End Engineer page!</h1>
-        <i>But I can do much more...</i>
-        <p>
-          Hi, I'm Ive! I'm a Brazilian software developer with broad experience in software
-          development. The projects I've been involved in throughout my career vary from game
-          development to research in machine learning. I'm passionate about learning new technologies
-          and sharing my knowledge, whether through teaching or mentoring by example. Here, I want
-          to share a small part of my knowledge through the technologies and stacks I've worked
-          with over the last few years (at least the projects that I can share publicly). Feel welcome
-          to explore and contact me to share your thoughts.
-        </p>
+    <main>
+      <section class="content" id="introduction">
+        <div>
+          <h1>Ive's developer page!</h1>
+          <p>
+            Hi, I'm <strong>Ive!</strong> I'm a seasoned and dynamic software developer with
+            a broad range of experience. My projects span from game development
+            to cutting-edge research in machine learning. I'm deeply passionate about
+            embracing new technologies and fostering learning, whether through teaching
+            or leading by example. Here, I'm excited to showcase some of the stacks
+            and insights I've accumulated over the years.
+          </p>
+          <i>..and I kinda like palindromes...</i>
+          <address>
+            <p>
+              <strong>Feel free to delve in and reach
+                out to share your thoughts.</strong>
+            </p>
+            <a href="https://www.linkedin.com/in/ive-tourinho/">🔗 <strong>in/ive-tourinho/</strong></a>
+            <a href="mailto:ivetourinho@gmail.com">📧 <strong>ivetourinho@gmail.com</strong></a>
+          </address>
+        </div >
+        <div>
+          <img src="./public/ive-foto.jpeg" />
+        </div>
       </section>
-      <section id="personal">
+      <section class="content" id="personal">
         <h2>Personal Projects</h2>
         <article>
           <figure>
             <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
           </figure>
-          <header>
-            <h3> Project name</h3>
-            <p> Year</p>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis
-            vestibulum diam, sit amet iaculis eros tincidunt eu. In porttitor auctor mattis.
-            Quisque id mi sed risus finibus faucibus sed ac dolor. Etiam vitae ligula purus.
-            Aenean euismod aliquam felis. Quisque iaculis ligula ut blandit varius.
-            Nullam fringilla, felis et tempor fermentum, mauris justo facilisis lectus,
-            eget sodales nibh ligula et dui.
-          </p>
-          <a href="">Source Code</a>
+          <div>
+            <header>
+              <h3> Project name</h3>
+              <p> Year</p>
+            </header>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis
+              vestibulum diam, sit amet iaculis eros tincidunt eu. In porttitor auctor mattis.
+              Quisque id mi sed risus finibus faucibus sed ac dolor. Etiam vitae ligula purus.
+              Aenean euismod aliquam felis. Quisque iaculis ligula ut blandit varius.
+              Nullam fringilla, felis et tempor fermentum, mauris justo facilisis lectus,
+              eget sodales nibh ligula et dui.
+            </p>
+            <a href="">Source Code</a>
+          </div>
         </article>
       </section>
-      <section id="tests">
+      <section class="content" id="tests">
         <h2>Coding Tests</h2>
       </section>
-      <section id="cases">
+      <section class="content" id="cases">
         <h2>Cases</h2>
       </section>
     </main>
-    <footer class="content">
-      <article>
+    <footer >
+      <article class="content">
         <h2> Metrics</h2>
         <p>Updated at <time datetime="2024-03-14 20:00">14th April, 2024</time></p>
         <section>
@@ -108,6 +123,9 @@
         </section>
         <p>Reference: <cite><a href='https://developers.google.com/search/docs/appearance/core-web-vitals'>Understanding Core Web Vitals and Google search results</a></cite></p>
       </article>
+      <section>
+        <p>Powered by Ive</p>
+      </section>
     </footer>
   </body>
 </html>
