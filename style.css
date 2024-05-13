@@ -62,13 +62,8 @@ address {
   display: flex;
   flex-flow: column;
   margin-top: 32px;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
-}
-
-address p {
-  width: 100%;
-  text-align: center;
 }
 
 .content {
@@ -220,5 +215,10 @@ input:checked + .slider:before {
   width: 100%;
   max-width: 400px;
   border-radius: 50%;
+  place-self: center;
+}
+
+#presentation {
+  height: 140px;
 }
 

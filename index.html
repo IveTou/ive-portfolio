@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./public/ive-logo.png">
     <!-- <link rel="canonical" href="https://">check it out https://letsencrypt.org/pt-br/ -->
+    <script src="./scripts.js"></script>
   </head>
-  <body>
+  <body onload="typeWriter()">
     <header class="main-header">
       <div>
         <a class="header-icon" href="#introduction"><img src="./public/ive-logo.png"></a>
@@ -41,15 +42,8 @@
       <section class="content" id="introduction">
         <div>
           <h1>Ive's developer page!</h1>
-          <p>
-            Hi, I'm <strong>Ive!</strong> I'm a seasoned and dynamic software developer with
-            a broad range of experience. My projects span from game development
-            to cutting-edge research in machine learning. I'm deeply passionate about
-            embracing new technologies and fostering learning, whether through teaching
-            or leading by example. Here, I'm excited to showcase some of the stacks
-            and insights I've accumulated over the years.
-          </p>
-          <i>..and I kinda like palindromes...</i>
+          <p id="presentation"></p>
+          <i>..and I kinda like <a href="https://en.wikipedia.org/wiki/Palindrome">palindromes...</a></i>
           <address>
             <p>
               <strong>Feel free to delve in and reach
