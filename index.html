@@ -8,11 +8,10 @@
     <meta name="author" content="Ive Santos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./public/ive-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/favico.jpeg">
     <!-- <link rel="canonical" href="https://">check it out https://letsencrypt.org/pt-br/ -->
-    <script src="./scripts.js"></script>
   </head>
-  <body onload="typeWriter()">
+  <body>
     <header class="main-header">
       <div>
         <a class="header-icon" href="#introduction"><img src="./public/ive-logo.png"></a>
@@ -27,7 +26,7 @@
           <div class="header-actions">
             <div>
               <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" id="input-toggle">
                 <span class="slider"></span>
               </label>
             </div>
@@ -121,5 +120,6 @@
         <p>Powered by Ive</p>
       </section>
     </footer>
+    <script src="./scripts.js"></script>
   </body>
 </html>

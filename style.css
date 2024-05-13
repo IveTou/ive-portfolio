@@ -1,10 +1,23 @@
 body {
+  --bg: #FFFF;
+  --bg-footer: #008244;
+  --font-color: #000;
+  --font-color-link: #008244;
+
   display: flex;
   height: 100vh;
   flex-flow: column;
-  background-color: #FFFF;
+  background-color: var(--bg);
   margin: 0 auto;
   font-family: "Lucida Console", "Courier New", monospace;
+  color: var(--font-color);
+}
+
+.dark {
+  --bg: #000;
+  --bg-footer: #008244;
+  --font-color: #FFF;
+  --font-color-link: #34ff34;
 }
 
 main {
@@ -15,7 +28,7 @@ main {
 }
 
 h1 {
-  color: black;
+  color: var(--font-color);
 }
 
 h2 {
@@ -24,11 +37,11 @@ h2 {
 
 a {
   text-decoration: unset;
-  color: green;
+  color: var(--font-color-link);
   font-style: normal;
 }
 a:visited {
-  color: green;
+  color: var(--font-color-link);
 }
 
 .main-header {
@@ -87,7 +100,7 @@ address {
 }
 
 .header-icon img {
-  max-height: 30px;
+  max-height: 40px;
 }
 
 nav {
@@ -127,7 +140,7 @@ footer {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  background: #008244;
+  background: var(--bg-footer);
   color: #fff;
   padding: 32px 24px;
 }
