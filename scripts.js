@@ -101,7 +101,7 @@ var i18nElements
 
 function setPageLanguage() {
   i18nElements = document.querySelectorAll("[data-i18n]")
-  const language = window.localStorage.getItem("language") || 'en';
+  const language = window.localStorage.getItem("language") || 'en'
 
 
   for(let i = 0; i < i18nElements.length; i++) {
@@ -115,3 +115,16 @@ function setPageLanguage() {
 }
 
 document.body.addEventListener("load", setPageLanguage())
+
+function languageChangeHandler(e) {
+  if(!e) return
+  const lang = e.split('-')[0]
+  if(!lang) return
+  window.localStorage.setItem("language", e.split('-')[0])
+
+  typeWriter()
+  setPageLanguage()
+}
+
+document.getElementById("en-us").addEventListener("click", () => languageChangeHandler("en-us"))
+document.getElementById("pt-br").addEventListener("click", () => languageChangeHandler("pt-br"))

@@ -3,6 +3,7 @@ body {
   --bg-footer: #008244;
   --font-color: #000;
   --font-color-link: #008244;
+  --font-color-link-light: #34ff34;
 
   display: flex;
   height: 100vh;
@@ -106,6 +107,7 @@ address {
 nav {
   display: flex;
   gap: 16px;
+  align-items: center;
 }
 
 nav ul {
@@ -120,7 +122,20 @@ nav ul a {
 
 .header-actions {
   display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.lang-buttons {
+  display: flex;
   gap: 8px;
+  font-size: 2em;
+}
+
+.lang-buttons button {
+  all: unset;
+  cursor: pointer;
+  padding-top: 6px;
 }
 
 section {
@@ -155,11 +170,19 @@ footer section:last-child {
   margin: 0;
 }
 
+footer a {
+  color: var(--font-color-link-light);
+}
+
+footer a:visited {
+  color: var(--font-color-link-light);
+}
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 17px;
+  width: 60px;
+  height: 34px;
 }
 
 .switch input {
@@ -178,16 +201,16 @@ footer section:last-child {
   background-color: #69bff8;
   -webkit-transition: .4s;
   transition: .4s;
-  border-radius: 17px;
+  border-radius: 34px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
   background-color: #fffc32;
   -webkit-transition: .4s;
   transition: .4s;
@@ -204,9 +227,9 @@ input:focus + .slider {
 
 input:checked + .slider:before {
   background-color: #ddd;
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 #introduction {
