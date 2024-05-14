@@ -62,16 +62,27 @@ const contentJson = {
 }
 
 var i = 0;
+var timeoutId
+var langRef
 
 function typeWriter() {
-  const language = window.localStorage.getItem("language") || 'en';
   const speed = 50;
+  const language = window.localStorage.getItem("language") || 'en';
+  const element = document.getElementById("presentation")
+  /* clear state */
+  if(language !== langRef) {
+    langRef = language
+    clearTimeout(timeoutId)
+    i = 0
+    element.innerHTML = ''
+  }
+
   const txt = contentJson.intro["title-greets"][language]
 
   if (i < txt.length) {
-    document.getElementById("presentation").innerHTML += txt.charAt(i);
+    element.innerHTML += txt.charAt(i);
     i++;
-    setTimeout(typeWriter, speed);
+    timeoutId = setTimeout(typeWriter, speed);
   }
 }
 
