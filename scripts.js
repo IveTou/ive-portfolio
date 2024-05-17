@@ -110,11 +110,20 @@ toggle.addEventListener("click", () => {
 });
 
 var i18nElements
+const engFlag = document.getElementById("en-us")
+const ptFlag = document.getElementById("pt-br")
 
 function setPageLanguage() {
   i18nElements = document.querySelectorAll("[data-i18n]")
   const language = window.localStorage.getItem("language") || 'en'
 
+  if (language == 'en') {
+    engFlag.style.setProperty('filter', 'grayscale(0%)');
+    ptFlag.style.setProperty('filter', 'grayscale(100%)');
+  } else {
+    engFlag.style.setProperty('filter', 'grayscale(100%)');
+    ptFlag.style.setProperty('filter', 'grayscale(0%)');
+  }
 
   for(let i = 0; i < i18nElements.length; i++) {
     const ele = i18nElements[i]
@@ -138,5 +147,5 @@ function languageChangeHandler(e) {
   setPageLanguage()
 }
 
-document.getElementById("en-us").addEventListener("click", () => languageChangeHandler("en-us"))
-document.getElementById("pt-br").addEventListener("click", () => languageChangeHandler("pt-br"))
+engFlag.addEventListener("click", () => languageChangeHandler("en-us"))
+ptFlag.addEventListener("click", () => languageChangeHandler("pt-br"))
