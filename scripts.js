@@ -89,23 +89,30 @@ function typeWriter() {
 
 document.body.addEventListener("load", typeWriter())
 
+const toggle = document.getElementById("input-toggle")
+
 document.body.addEventListener("load", function() {
   const theme = window.localStorage.getItem("theme")
-  if (theme === "dark") document.body.classList.add("dark")
-}())
 
-const toggle = document.getElementById("input-toggle")
+  if (theme === "dark") {
+    document.body.classList.add("dark")
+    toggle.checked = true;
+  } else {
+    document.body.classList.remove("dark")
+    toggle.checked = false;
+  }
+}())
 
 toggle.addEventListener("click", () => {
   const theme = window.localStorage.getItem("theme")
-  const force = theme === "dark"
+  const isDark = theme === "dark"
 
-  if (force) {
-    document.body.classList.remove("dark")
+  if (isDark) {
     window.localStorage.setItem("theme", "light")
+    document.body.classList.remove("dark")
   } else {
-    document.body.classList.add("dark")
     window.localStorage.setItem("theme", "dark")
+    document.body.classList.add("dark")
   }
 });
 
