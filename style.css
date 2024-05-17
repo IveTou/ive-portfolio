@@ -139,7 +139,7 @@ nav ul a {
 }
 
 section {
-  margin: 56px 0;
+  margin-bottom: 56px;
 }
 
 section article {
@@ -162,11 +162,17 @@ footer {
 
 footer section {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
+
+  @media only screen and (min-width: 768px) {
+    flex-flow: row;
+  }
 }
 
 footer section:last-child {
   justify-content: center;
+  text-align: center;
   margin: 0;
 }
 
@@ -234,7 +240,12 @@ input:checked + .slider:before {
 
 #introduction {
   display: grid;
-  grid-template-columns: 50% 50%;
+  gap: 64px;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 50% 50%;
+    gap: unset;
+  }
 }
 
 #introduction > div {
@@ -249,12 +260,20 @@ input:checked + .slider:before {
 
 #introduction img {
   width: 100%;
-  max-width: 400px;
+  max-width: 136px;
   border-radius: 50%;
   place-self: center;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 400px;
+  }
 }
 
 #presentation {
-  height: 140px;
+  height: 220px;
+
+  @media only screen and (min-width: 768px) {
+    height: 140px;
+  }
 }
 

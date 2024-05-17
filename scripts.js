@@ -42,7 +42,7 @@ const contentJson = {
   },
   "metrics": {
     title: { en: "Metrics", pt: "Métricas"},
-    updated: { en: "Updated at", pt: "Data de atualização"},
+    updated_at: { en: "14th April, 2024 ", pt: "14 de Abril, 2024"},
     lcp: {
       en: "Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.",
       pt: "Mede o desempenho de carregamento. Para fornecer uma boa experiência ao usuário, esforce-se para que o LCP ocorra nos primeiros 2,5 segundos após o início do carregamento da página."
@@ -56,8 +56,9 @@ const contentJson = {
       pt: "Mede a estabilidade visual. Para fornecer uma boa experiência ao usuário, esforce-se para ter uma pontuação CLS inferior a 0,1."
     },
   },
-  "misc": {
-    "soruce": { en: "Source Code", pt: "Código Fonte"},
+  misc: {
+    source: { en: "Source Code", pt: "Código Fonte"},
+    updated: { en: "Updated at ", pt: "Data de atualização: "},
   }
 }
 
@@ -66,7 +67,7 @@ var timeoutId
 var langRef
 
 function typeWriter() {
-  const speed = 50;
+  const speed = 30;
   const language = window.localStorage.getItem("language") || 'en';
   const element = document.getElementById("presentation")
   /* clear state */
