@@ -5,7 +5,7 @@ const contentJson = {
     "tests": { en: "Tests", pt: "Desafios"}
   },
   "intro": {
-    "title": { en: "Ive's developer page!", pt: "Ive - Portifolio profissional"},
+    "title": { en: "Ive's developer page!", pt: "Ive - Portifólio profissional"},
     "title-greets": {
       en: `
         Hi, I'm Ive! I"m a seasoned and dynamic software developer with

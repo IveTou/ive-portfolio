@@ -24,8 +24,12 @@ body {
 main {
   display: flex;
   flex-flow: column;
-  margin-top: 90px;
   padding: 32px 24px;
+  margin-top: 154px;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 90px;
+  }
 }
 
 h1 {
@@ -47,12 +51,57 @@ a:visited {
 
 .main-header {
   display: flex;
+  flex-flow: column;
   position: fixed;
   width: 100%;
   background: inherit;
-  justify-content: center;
+  align-items: center;
   box-shadow: 0 1px 4px grey;
-  height: 90px;
+  height: 154px;
+
+  @media only screen and (min-width: 768px) {
+    height: 90px;
+  }
+}
+
+.main-header-desktop {
+  display: flex;
+  flex-grow: 1;
+  max-width: 1440px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.main-header-desktop > * {
+  padding: 0 16px;
+}
+
+.main-header-mobile {
+  display: flex;
+  justify-content: center;
+  height: 64px;
+  width: 100%;
+  border-top: 1px solid gray;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-header-right {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.main-header-right nav {
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .main-header a {
@@ -61,15 +110,6 @@ a:visited {
 
 .main-header a:visited {
   color: inherit;
-}
-
-.main-header > div {
-  display: flex;
-  flex-grow: 1;
-  max-width: 1440px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
 }
 
 address {
@@ -85,12 +125,6 @@ address {
   max-width: 1440px;
   place-self: center;
   width: 100%;
-}
-
-.main-header .content {
-  justify-content: space-between;
-  padding: 16px;
-  align-items: center;
 }
 
 .header-icon {
@@ -144,7 +178,10 @@ section {
 
 section article {
   display: grid;
-  grid-template-columns: 50% 50%;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 50% 50%;
+  }
 }
 
 section article figure {
