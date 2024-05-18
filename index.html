@@ -2,81 +2,88 @@
 <html>
   <head>
     <title>Ive's Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Ive professional portfolio page">
-    <meta name="keywords" content="Front-End, Software, Developer, Game, Data Science, Machine learning, Recommendation Systems">
-    <meta name="author" content="Ive Santos">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./public/favico.jpeg">
-    <!-- <link rel="canonical" href="https://">check it out https://letsencrypt.org/pt-br/ -->
+    <meta charset='UTF-8'>
+    <meta name='description' content='Ive professional portfolio page'>
+    <meta name='keywords' content='Front-End, Software, Developer, Game, Data Science, Machine learning, Recommendation Systems'>
+    <meta name='author' content='Ive Santos'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='style.css'>
+    <link rel='icon' type='image/png' sizes='16x16' href='./public/favico.jpeg'>
+    <!-- <link rel='canonical' href='https://'>check it out https://letsencrypt.org/pt-br/ -->
   </head>
   <body>
-    <header class="main-header">
-      <div class="main-header-desktop">
-        <a class="header-icon" href="#introduction"><img src="./public/ive-logo.png"></a>
-        <div class="main-header-right">
+    <header class='main-header'>
+      <div class='main-header-desktop'>
+        <a class='header-icon' href='#introduction'><img src='./public/ive-logo.png'></a>
+        <div class='main-header-right'>
           <nav>
             <div>
               <ul>
-                <li><a href="#personal" data-i18n="nav.personal"></a> |</li>
-                <li><a href="#cases" data-i18n="nav.cases"></a> | </li>
-                <li><a href="#tests" data-i18n="nav.tests"></a></li>
+                <li><a href='#personal' data-i18n='nav.personal'></a> |</li>
+                <li><a href='#cases' data-i18n='nav.cases'></a> | </li>
+                <li><a href='#tests' data-i18n='nav.tests'></a></li>
               </ul>
             </div>
           </nav>
-          <div class="header-actions">
+          <div class='header-actions'>
             <div>
-              <label class="switch">
-                <input type="checkbox" id="input-toggle">
-                <span class="slider"></span>
+              <label class='switch'>
+                <input type='checkbox' id='input-toggle'>
+                <span class='slider'></span>
               </label>
             </div>
-            <div class="lang-buttons">
-              <button id="pt-br">🇧🇷</button>
-              <button id="en-us">🇺🇸</button>
+            <div class='lang-buttons'>
+              <button id='pt-br'>🇧🇷</button>
+              <button id='en-us'>🇺🇸</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="main-header-mobile">
+      <div class='main-header-mobile'>
         <nav>
           <div>
             <ul>
-              <li><a href="#personal" data-i18n="nav.personal"></a> |</li>
-              <li><a href="#cases" data-i18n="nav.cases"></a> | </li>
-              <li><a href="#tests" data-i18n="nav.tests"></a></li>
+              <li><a href='#personal' data-i18n='nav.personal'></a> |</li>
+              <li><a href='#cases' data-i18n='nav.cases'></a> | </li>
+              <li><a href='#tests' data-i18n='nav.tests'></a></li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
     <main>
-      <section class="content" id="introduction">
+      <section class='content' id='introduction'>
         <div>
-          <h1 data-i18n="intro.title"></h1>
-          <p id="presentation"></p>
+          <h1 data-i18n='intro.title'></h1>
+          <p id='presentation'></p>
           <i>
-            <span data-i18n="intro.title-i"></span>
-            <a data-i18n="intro.title-link" href="https://en.wikipedia.org/wiki/Palindrome"></a>
+            <span data-i18n='intro.title-i'></span>
+            <a data-i18n='intro.title-link' href='https://en.wikipedia.org/wiki/Palindrome'></a>
           </i>
           <address>
             <p>
-              <strong data-i18n="intro.addres-title"></strong>
+              <strong data-i18n='intro.addres-title'></strong>
             </p>
-            <a href="https://www.linkedin.com/in/ive-tourinho/">🔗 <strong>in/ive-tourinho/</strong></a>
-            <a href="mailto:ivetourinho@gmail.com">📧 <strong>ivetourinho@gmail.com</strong></a>
+            <a href='https://www.linkedin.com/in/ive-tourinho/'>🔗 <strong>in/ive-tourinho/</strong></a>
+            <a href='mailto:ivetourinho@gmail.com'>📧 <strong>ivetourinho@gmail.com</strong></a>
           </address>
         </div >
         <div>
-          <img src="./public/ive-foto.jpeg" />
+          <img src='./public/ive-foto.jpeg' />
         </div>
       </section>
-      <section class="content" id="personal">
-        <h2  data-i18n="personal.title"></h2>
+      <section class='content' id='personal'>
+        <h2  data-i18n='personal.title'></h2>
         <article>
+          <image-slider
+            images='[
+              { "url": "./public/favico.jpeg", "alt": "image" },
+              { "url": "./public/ive-foto.jpeg", "alt": "image" }
+            ]'
+          >
+          </image-slider>
           <figure>
-            <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+            <img src='pic_trulli.jpg' alt='Trulli' style='width:100%'>
             <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
           </figure>
           <div>
@@ -92,41 +99,41 @@
               Nullam fringilla, felis et tempor fermentum, mauris justo facilisis lectus,
               eget sodales nibh ligula et dui.
             </p>
-            <a data-i18n="misc.source" href="" >Source Code</a>
+            <a data-i18n='misc.source' href='' >Source Code</a>
           </div>
         </article>
       </section>
-      <section class="content" id="tests">
-        <h2 data-i18n="tests.title"></h2>
+      <section class='content' id='tests'>
+        <h2 data-i18n='tests.title'></h2>
       </section>
-      <section class="content" id="cases">
-        <h2 data-i18n="cases.title"></h2>
+      <section class='content' id='cases'>
+        <h2 data-i18n='cases.title'></h2>
       </section>
     </main>
     <footer >
-      <article class="content">
-        <h2 data-i18n="metrics.title"></h2>
-        <p><span data-i18n="misc.updated"></span><time data-i18n="metrics.updated_at">14th April, 2024</time></p>
+      <article class='content'>
+        <h2 data-i18n='metrics.title'></h2>
+        <p><span data-i18n='misc.updated'></span><time data-i18n='metrics.updated_at'>14th April, 2024</time></p>
         <section>
           <div>
             <h3>LCP</h3>
             <details>
               <summary>Largest Contentful Paint</summary>
-              <p data-i18n="metrics.lcp"></p>
+              <p data-i18n='metrics.lcp'></p>
             </details>
           </div>
           <div>
             <h3>INP</h3>
             <details>
               <summary>Interaction To Next Paint</summary>
-              <p data-i18n="metrics.inp"></p>
+              <p data-i18n='metrics.inp'></p>
             </details>
           </div>
           <div>
             <h3>CLS</h3>
             <details>
               <summary>Cumulative Layout Shift</summary>
-              <p data-i18n="metrics.cls"></p>
+              <p data-i18n='metrics.cls'></p>
             </details>
           </div>
         </section>
@@ -136,6 +143,7 @@
         <p>Powered by Ive + Jvascript + HTML + CSS </p>
       </section>
     </footer>
-    <script src="./scripts.js"></script>
+    <script src='./scripts/main.js'></script>
+    <script src='./scripts/ImageSlider.js'></script>
   </body>
 </html>
