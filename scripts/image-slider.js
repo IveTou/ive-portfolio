@@ -5,7 +5,7 @@ class ImageSlider extends HTMLElement {
 
   constructor() {
     // Always call super first in constructor
-    super()
+    self = super()
     this.#current = 0
     this.#shadow = this.attachShadow({ mode: 'closed' })
   }
@@ -55,9 +55,11 @@ class ImageSlider extends HTMLElement {
     this.#shadow.appendChild(prev)
     this.#shadow.appendChild(next)
 
+    self.style.setProperty('position', 'relative')
+
     const linkElem = document.createElement("link");
     linkElem.setAttribute("rel", "stylesheet");
-    linkElem.setAttribute("href", "./image-slider.css");
+    linkElem.setAttribute("href", "./scripts/image-slider.css");
     this.#shadow.appendChild(linkElem);
   }
 
