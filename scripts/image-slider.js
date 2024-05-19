@@ -1,16 +1,17 @@
 class ImageSlider extends HTMLElement {
   static observedAttributes = ['images']
   #current
+  #shadow
 
   constructor() {
     // Always call super first in constructor
     super()
     this.#current = 0
+    this.#shadow = this.attachShadow({ mode: 'closed' })
   }
 
   connectedCallback() {
     console.log('Custom element added to page.')
-    const shadow = this.attachShadow({ mode: 'open' })
     const images = this.getAttribute('images')
     let imagesLen = 0
 
@@ -21,6 +22,7 @@ class ImageSlider extends HTMLElement {
       imageList.map(({ url, alt }, index) => {
         const figure = document.createElement('figure')
         figure.setAttribute('key', index)
+        figure.style.setProperty('display', 'none')
 
         const img = document.createElement('img')
         const figcaption = document.createElement('figcaption')
@@ -32,8 +34,10 @@ class ImageSlider extends HTMLElement {
         figure.appendChild(img)
         figure.appendChild(figcaption)
 
-        shadow.appendChild(figure)
+        this.#shadow.appendChild(figure)
       })
+
+      this.#shadow.querySelector(`[key='${this.#current}']`).style.setProperty('display', 'block')
     } catch (error) {
       console.error(error)
     }
@@ -48,16 +52,28 @@ class ImageSlider extends HTMLElement {
     prev.addEventListener('click', () => this.setCurrent(-1, imagesLen))
     next.addEventListener('click', () => this.setCurrent(1, imagesLen))
 
-    shadow.appendChild(prev)
-    shadow.appendChild(next)
+    this.#shadow.appendChild(prev)
+    this.#shadow.appendChild(next)
+
+    const linkElem = document.createElement("link");
+    linkElem.setAttribute("rel", "stylesheet");
+    linkElem.setAttribute("href", "./image-slider.css");
+    this.#shadow.appendChild(linkElem);
   }
 
   setCurrent(n, len) {
     let curr = this.#current
     curr += n
-
+    const figs = this.#shadow.querySelectorAll('figure')
     if(curr >= 0 && curr < len) {
       this.#current = curr
+      figs.forEach((e) => {
+        if(e.getAttribute('key') == curr) {
+          e.style.setProperty('display', 'block')
+        } else {
+          e.style.setProperty('display', 'none')
+        }
+      })
     }
   }
 
