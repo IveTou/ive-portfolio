@@ -87,7 +87,7 @@ function typeWriter() {
   }
 }
 
-document.body.addEventListener('load', typeWriter())
+// document.body.addEventListener('load', typeWriter())
 
 const toggle = document.getElementById('input-toggle')
 
@@ -150,7 +150,7 @@ function languageChangeHandler(e) {
   if(!lang) return
   window.localStorage.setItem('language', e.split('-')[0])
 
-  typeWriter()
+  // typeWriter()
   setPageLanguage()
 }
 
