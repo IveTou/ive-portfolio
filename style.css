@@ -208,6 +208,7 @@ footer h2, footer h3 {
   color: var(--font-color-footer);
 }
 
+
 footer section {
   display: flex;
   flex-flow: column;
