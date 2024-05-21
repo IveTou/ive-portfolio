@@ -2,6 +2,7 @@ body {
   --bg: #FFFF;
   --bg-footer: #008244;
   --font-color: #000;
+  --font-color-footer: #fff;
   --font-color-link: #008244;
   --font-color-link-light: #34ff34;
 
@@ -199,8 +200,12 @@ footer {
   flex-flow: column;
   justify-content: center;
   background: var(--bg-footer);
-  color: #fff;
+  color: var(--font-color-footer);
   padding: 32px 24px;
+}
+
+footer h1, h2, h3 {
+  color: var(--font-color-footer);
 }
 
 footer section {
@@ -217,6 +222,7 @@ footer section:last-child {
   justify-content: center;
   text-align: center;
   margin: 0;
+  border-top: 1px solid var(--font-color-footer);
 }
 
 footer a {

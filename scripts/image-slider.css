@@ -17,6 +17,7 @@ img {
   cursor: pointer;
   bottom: 50%;
   background: gray;
+  color: #fff;
   height: 36px;
   width: 36px;
   border-radius: 36px;
