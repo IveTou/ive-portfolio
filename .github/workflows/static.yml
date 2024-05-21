@@ -42,4 +42,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         env:
-          GITHUB_API_KEY: ${{ secrets.CRUX_API_KEY }}
+          CRUX_API_KEY: ${{ secrets.CRUX_API_KEY }}
