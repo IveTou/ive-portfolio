@@ -26,7 +26,7 @@ const contentJson = {
     },
     'title-i': { en: '..and I kinda like ', pt: '...e eu gosto um tanto de '},
     'title-link': { en: 'palindromes...', pt: 'palíndromos...'},
-    'addres-title': {
+    'address-title': {
       en: 'Feel free to delve in and reach out to share your thoughts.',
       pt: 'Sinta-se bem-vindo à minha página e compartilhe suas dúvidas, críticas e sugestẽs!'
     },
