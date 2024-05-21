@@ -171,5 +171,4 @@ document.body.addEventListener('load', (async () => {
   );
 
   console.log(response)
-  console.log('APIKEY', process.env.CRUX_API_KEY)
 })())
