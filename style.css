@@ -204,7 +204,7 @@ footer {
   padding: 32px 24px;
 }
 
-footer h1, h2, h3 {
+footer h2, footer h3 {
   color: var(--font-color-footer);
 }
 
