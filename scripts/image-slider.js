@@ -11,7 +11,6 @@ class ImageSlider extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log('Custom element added to page.')
     const images = this.getAttribute('images')
     let imagesLen = 0
 
@@ -79,9 +78,9 @@ class ImageSlider extends HTMLElement {
     }
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
+  /* attributeChangedCallback(name, oldValue, newValue) {
     console.log(`Attribute ${name} has changed.`)
-  }
+  } */
 
   /*
   disconnectedCallback() {

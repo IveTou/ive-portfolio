@@ -159,7 +159,6 @@ ptFlag.addEventListener('click', () => languageChangeHandler('pt-br'))
 
 
 document.body.addEventListener('load', (async () => {
-  console.log('Hey')
   const response = await fetch(
     'https://cat-fact.herokuapp.com/facts',
     {
@@ -172,4 +171,5 @@ document.body.addEventListener('load', (async () => {
   );
 
   console.log(response)
+  console.log('APIKEY', process.env.CRUX_API_KEY)
 })())
