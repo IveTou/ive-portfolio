@@ -158,17 +158,17 @@ engFlag.addEventListener('click', () => languageChangeHandler('en-us'))
 ptFlag.addEventListener('click', () => languageChangeHandler('pt-br'))
 
 
-document.body.addEventListener('load', (async () => {
+/* document.body.addEventListener('load', (async () => {
   const response = await fetch(
     'https://cat-fact.herokuapp.com/facts',
     {
       method: 'get',
-      /* headers: {
-        Authorization: `Basic ${process.env.REACT_APP_BFF_AUTH_SECRET}`,
-        'x-user-id': userId,
-      }, */
+      //headers: {
+        //Authorization: `Basic ${process.env.REACT_APP_BFF_AUTH_SECRET}`,
+        //'x-user-id': userId,
+      //},
     }
   );
 
   console.log(response)
-})())
+})()) */
