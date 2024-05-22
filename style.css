@@ -26,11 +26,6 @@ main {
   display: flex;
   flex-flow: column;
   padding: 32px 24px;
-  margin-top: 154px;
-
-  @media only screen and (min-width: 768px) {
-    margin-top: 90px;
-  }
 }
 
 h1, h2, h3 {
@@ -43,7 +38,19 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.6em;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2em;
+  }
+}
+
+p {
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    text-align:start;
+  }
 }
 
 a {
@@ -51,6 +58,7 @@ a {
   color: var(--font-color-link);
   font-style: normal;
 }
+
 a:visited {
   color: var(--font-color-link);
 }
@@ -58,7 +66,6 @@ a:visited {
 .main-header {
   display: flex;
   flex-flow: column;
-  position: fixed;
   width: 100%;
   background: inherit;
   align-items: center;
@@ -71,18 +78,14 @@ a:visited {
   }
 }
 
-.main-header-desktop {
+.main-header-base {
   display: flex;
-  flex-grow: 1;
   max-width: 1440px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-}
-
-.main-header-desktop > * {
-  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .main-header-mobile {
@@ -132,6 +135,7 @@ address {
   max-width: 1440px;
   place-self: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .header-icon {
@@ -143,16 +147,20 @@ address {
 
 .header-icon img {
   max-height: 40px;
+  width: 100%;
 }
 
 nav {
   display: flex;
-  gap: 16px;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
 }
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
 }
@@ -222,13 +230,6 @@ footer h3 span {
   }
 }
 
-footer .desktop {
-  display: none;
-  @media only screen and (min-width: 768px) {
-    display: block;
-  }
-}
-
 footer section {
   display: flex;
   flex-flow: column;
@@ -250,8 +251,16 @@ footer section:last-child {
   border-top: 1px solid var(--font-color-footer);
 }
 
+footer section:last-child p {
+  text-align: center;
+}
+
 footer a {
   color: var(--font-color-link-light);
+}
+
+footer p {
+  text-align: start;
 }
 
 footer a:visited {
@@ -329,25 +338,32 @@ input:checked + .slider:before {
 }
 
 #introduction h1 {
-  font-size: 3em;
+  font-size: 1.8em;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 3em;
+  }
+}
+
+#introduction p {
   text-align: center;
 }
 
-#introduction img {
-  width: 100%;
+.profile-img {
   border-radius: 50%;
   place-self: center;
+  display: block;
 
   @media only screen and (min-width: 768px) {
-    max-width: 400px;
+    display: none;
   }
 }
 
-#presentation {
-  height: 220px;
+.desktop {
+  display: none;
 
   @media only screen and (min-width: 768px) {
-    height: 140px;
+    display: block;
   }
 }
-

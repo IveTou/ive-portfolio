@@ -63,12 +63,16 @@ class ImageSlider extends HTMLElement {
     style.textContent = `
       figure {
         text-align: center;
-        height: 400px;
+        height: 440px;
       }
 
       img {
+        width: 100%;
+        height: auto;
+
         @media only screen and (min-width: 768px) {
-          width: auto;
+          height: unset;
+          width: unset;
         }
       }
 
@@ -94,11 +98,11 @@ class ImageSlider extends HTMLElement {
       }
 
       .prev {
-        left: 64px;
+        left: 32px;
       }
 
       .next {
-        right: 64px;
+        right: 32px;
       }
     `
 
