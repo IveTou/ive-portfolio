@@ -311,7 +311,6 @@ input:checked + .slider:before {
 
 #introduction img {
   width: 100%;
-  max-width: 136px;
   border-radius: 50%;
   place-self: center;
 

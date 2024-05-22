@@ -67,9 +67,6 @@ class ImageSlider extends HTMLElement {
       }
 
       img {
-        width: 100%;
-        max-height: 400px;
-
         @media only screen and (min-width: 768px) {
           width: auto;
         }
