@@ -42,10 +42,14 @@ const contentJson = {
   },
   metrics: {
     title: { en: 'Metrics', pt: 'Métricas'},
-    updated_at: { en: '14th April, 2024 ', pt: '14 de Abril, 2024'},
+    updated_at: { en: '21th May, 2024 ', pt: '21 de Maio, 2024'},
     lcp: {
       en: 'Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.',
       pt: 'Mede o desempenho de carregamento. Para fornecer uma boa experiência ao usuário, esforce-se para que o LCP ocorra nos primeiros 2,5 segundos após o início do carregamento da página.'
+    },
+    fcp: {
+      en: 'FCP measures the time from when the user first navigates to the page to when any part of the page\'s content is rendered on the screen. To provide a good user experience, sites must have an FCP of 1.8 seconds or less.',
+      pt: 'O FCP mede o tempo desde o momento em que o usuário navega pela primeira vez até a página até o momento em que qualquer parte do conteúdo da página é renderizada na tela. Para proporcionar uma boa experiência ao usuário, os sites devem ter um FCP de 1,8 segundos ou menos.'
     },
     inp: {
       en: 'Measures responsiveness. To provide a good user experience, strive to have an INP of less than 200 milliseconds.',

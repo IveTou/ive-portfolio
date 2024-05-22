@@ -205,9 +205,29 @@ footer {
 }
 
 footer h2, footer h3 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  text-align: initial;
   color: var(--font-color-footer);
 }
 
+footer h3 span {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 700;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+footer .dsktp {
+  display: none;
+  @media only screen and (min-width: 768px) {
+    display: block;
+  }
+}
 
 footer section {
   display: flex;
@@ -215,7 +235,9 @@ footer section {
   justify-content: space-between;
 
   @media only screen and (min-width: 768px) {
-    flex-flow: row;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
