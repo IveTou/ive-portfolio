@@ -25,7 +25,7 @@ body {
 main {
   display: flex;
   flex-flow: column;
-  padding: 32px 24px;
+  padding: 32px;
 }
 
 h1, h2, h3 {
@@ -196,6 +196,7 @@ section article {
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: 50% 50%;
+    gap: 24px;
   }
 }
 

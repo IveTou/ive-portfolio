@@ -38,7 +38,7 @@ class ImageSlider extends HTMLElement {
         this.#shadow.appendChild(figure)
       })
 
-      this.#shadow.querySelector(`[key='${this.#current}']`).style.setProperty('display', 'block')
+      this.#shadow.querySelector(`[key='${this.#current}']`).style.setProperty('display', 'flex')
     } catch (error) {
       console.error(error)
     }
@@ -57,13 +57,15 @@ class ImageSlider extends HTMLElement {
     this.#shadow.appendChild(next)
 
     self.style.setProperty('position', 'relative')
+    self.style.setProperty('overflow', 'hidden')
 
     const style = document.createElement('style')
 
     style.textContent = `
       figure {
         text-align: center;
-        height: 440px;
+        justify-content: center;
+        flex-flow: column;
       }
 
       img {
@@ -120,7 +122,7 @@ class ImageSlider extends HTMLElement {
       this.#current = curr
       figs.forEach((e) => {
         if(e.getAttribute('key') == curr) {
-          e.style.setProperty('display', 'block')
+          e.style.setProperty('display', 'flex')
         } else {
           e.style.setProperty('display', 'none')
         }
