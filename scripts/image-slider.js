@@ -18,7 +18,7 @@ class ImageSlider extends HTMLElement {
       const imageList = JSON.parse(images)
       imagesLen = imageList.length
 
-      imageList.map(({ url, alt }, index) => {
+      imageList.map(({ url, alt, height, width }, index) => {
         const figure = document.createElement('figure')
         figure.setAttribute('key', index)
         figure.style.setProperty('display', 'none')
@@ -28,6 +28,8 @@ class ImageSlider extends HTMLElement {
 
         img.src = url
         img.alt = alt
+        img.height = height
+        img.width = width
         figcaption.innerHTML = alt
 
         figure.appendChild(img)
@@ -56,10 +58,57 @@ class ImageSlider extends HTMLElement {
 
     self.style.setProperty('position', 'relative')
 
-    const linkElem = document.createElement("link");
+    const style = document.createElement('style')
+
+    style.textContent = `
+      figure {
+        text-align: center;
+        height: 400px;
+      }
+
+      img {
+        width: 100%;
+        max-height: 400px;
+
+        @media only screen and (min-width: 768px) {
+          width: auto;
+        }
+      }
+
+      .button {
+        position: absolute;
+        cursor: pointer;
+        bottom: 50%;
+        background: gray;
+        color: #fff;
+        height: 36px;
+        width: 36px;
+        border-radius: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+        font-weight: 700;
+      }
+
+      .button:hover {
+        background: #008244;
+        box-shadow: 0 0  4px #34ff34;
+      }
+
+      .prev {
+        left: 64px;
+      }
+
+      .next {
+        right: 64px;
+      }
+    `
+
+    /* const linkElem = document.createElement("link");
     linkElem.setAttribute("rel", "stylesheet");
-    linkElem.setAttribute("href", "./scripts/image-slider.css");
-    this.#shadow.appendChild(linkElem);
+    linkElem.setAttribute("href", "./scripts/image-slider.css"); */
+    this.#shadow.appendChild(style);
   }
 
   setCurrent(n, len) {
