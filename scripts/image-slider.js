@@ -18,7 +18,7 @@ class ImageSlider extends HTMLElement {
       const imageList = JSON.parse(images)
       imagesLen = imageList.length
 
-      imageList.map(({ url, alt, height, width }, index) => {
+      imageList.map(({ url, alt }, index) => {
         const figure = document.createElement('figure')
         figure.setAttribute('key', index)
         figure.style.setProperty('display', 'none')
@@ -28,8 +28,8 @@ class ImageSlider extends HTMLElement {
 
         img.src = url
         img.alt = alt
-        img.height = height
-        img.width = width
+        img.height = 400
+        img.width = 400
         figcaption.innerHTML = alt
 
         figure.appendChild(img)
