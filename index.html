@@ -2,14 +2,15 @@
 <html>
   <head>
     <!-- Google tag (gtag.js) -->
-    <!--<script src="https://www.googletagmanager.com/gtag/js?id=G-ZY5X5B7DD4"></script>-->
-    <!--<script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZY5X5B7DD4"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-ZY5X5B7DD4');
-    </script>-->
+    </script>
+     <!-- End of Google tag (gtag.js) -->
     <title>Ive's Portfolio</title>
     <meta charset='UTF-8'>
     <meta name='description' content='Ive professional portfolio page'>
@@ -23,7 +24,9 @@
   <body>
     <header class='main-header'>
       <div class='main-header-desktop'>
-        <a class='header-icon' href='#introduction'><img src='./public/ive-logo.webp' height='40' width='146'></a>
+        <a class='header-icon' href='#introduction'>
+          <img src='./public/ive-logo.webp' height='40' width='146'>
+        </a>
         <div class='main-header-right'>
           <nav>
             <div>
@@ -121,21 +124,21 @@
         <p><span data-i18n='misc.updated'></span><time data-i18n='metrics.updated_at'>14th April, 2024</time></p>
         <section>
           <div>
-            <h3>LCP <span>1.1s</span><span class='dsktp'>0.3s</span></h3>
+            <h3>LCP <span>1.1s</span><span class='desktop'>0.3s</span></h3>
             <details>
               <summary>Largest Contentful Paint</summary>
               <p data-i18n='metrics.lcp'></p>
             </details>
           </div>
           <div>
-            <h3>FCP <span>0.9s</span><span class='dsktp'>0.2s</span></h3>
+            <h3>FCP <span>0.9s</span><span class='desktop'>0.2s</span></h3>
             <details>
               <summary>First Contentful Paint</summary>
               <p data-i18n='metrics.fcp'></p>
             </details>
           </div>
           <div>
-            <h3>CLS <span>0.011</span><span class='dsktp'>0.001</span></h3>
+            <h3>CLS <span>0.011</span><span class='desktop'>0.001</span></h3>
             <details>
               <summary>Cumulative Layout Shift</summary>
               <p data-i18n='metrics.cls'></p>
@@ -147,7 +150,7 @@
         <cite><a href='https://web.dev/articles/user-centric-performance-metrics'>User-centric performance metrics</a></cite>
       </article>
       <section>
-        <p>Powered by Ive + Jvascript + HTML + CSS </p>
+        <p>Powered by Ive + Javascript + HTML + CSS </p>
       </section>
     </footer>
     <script src='./scripts/main.js' defer></script>
