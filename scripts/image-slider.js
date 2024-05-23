@@ -64,7 +64,7 @@ class ImageSlider extends HTMLElement {
     style.textContent = `
       figure {
         text-align: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-flow: column;
       }
 
@@ -76,6 +76,10 @@ class ImageSlider extends HTMLElement {
           height: unset;
           width: unset;
         }
+      }
+
+      figcaption {
+        padding: 16px 0;
       }
 
       .button {

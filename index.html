@@ -26,26 +26,24 @@
     <header class='main-header'>
       <div class='main-header-base'>
         <a class='header-icon' href='#introduction'>
-          <img src='./public/ive-logo.webp' height='40' width='146'>
+          <img src='./public/ive-logo.webp' height='40' width='146' alt='logo'>
         </a>
         <div class='main-header-right'>
           <nav>
             <div>
               <ul>
-                <li><a href='#personal' data-i18n='nav.personal'></a> |</li>
-                <li><a href='#cases' data-i18n='nav.cases'></a> | </li>
-                <li><a href='#tests' data-i18n='nav.tests'></a> | </li>
+                <li><a href='#personal' data-i18n='nav.personal'></a></li>
+                <li><a href='#cases' data-i18n='nav.cases'></a></li>
+                <li><a href='#tests' data-i18n='nav.tests'></a></li>
                 <li><a href='#about' data-i18n='nav.about'></a></li>
               </ul>
             </div>
           </nav>
           <div class='header-actions'>
-            <div>
-              <label class='switch'>
-                <input type='checkbox' id='input-toggle'>
-                <span class='slider'></span>
-              </label>
-            </div>
+            <label for='input-toggle' class='switch'>
+              <input type='checkbox' id='input-toggle' name='Dark mode'>
+              <span class='slider' id='slider-toggle'></span>
+            </label>
             <div class='lang-buttons'>
               <button id='pt-br'>🇧🇷</button>
               <button id='en-us'>🇺🇸</button>
@@ -57,9 +55,9 @@
         <nav>
           <div>
             <ul>
-              <li><a href='#personal' data-i18n='nav.personal'></a> |</li>
-              <li><a href='#cases' data-i18n='nav.cases'></a> | </li>
-              <li><a href='#tests' data-i18n='nav.tests'></a> | </li>
+              <li><a href='#personal' data-i18n='nav.personal'></a></li>
+              <li><a href='#cases' data-i18n='nav.cases'></a></li>
+              <li><a href='#tests' data-i18n='nav.tests'></a></li>
               <li><a href='#about' data-i18n='nav.about'></a></li>
             </ul>
           </div>
@@ -69,8 +67,15 @@
     <main>
       <section class='content' id='introduction'>
         <div>
-          <h1 data-i18n='intro.title'></h1>
-          <p data-i18n='intro.title-greets' id='presentation'></p>
+          <h1 data-i18n='intro.title'>Ive's developer page!</h1>
+          <p data-i18n='intro.title-greets' id='presentation'>
+            Hi, I'm Ive! I'm a seasoned and dynamic software developer with
+        a broad range of experience. My projects span from game development
+        to cutting-edge research in Machine Learning. I'm deeply passionate about
+        embracing new technologies and fostering learning, whether through teaching
+        or leading by example. Here, I'm excited to showcase some of the stacks
+        and insights I've accumulated over the years.
+          </p>
           <i>
             <span data-i18n='intro.title-i'></span>
             <a data-i18n='intro.title-link' href='https://en.wikipedia.org/wiki/Palindrome'></a>
@@ -84,8 +89,8 @@
           </address>
         </div >
         <div>
-          <img class='profile-img' src='./public/ive-foto.webp' width='200' height='200' />
-          <img class='profile-img desktop' src='./public/ive-foto.webp' width='400' height='400' />
+          <img class='profile-img' src='./public/ive-foto.webp' width='200' height='200' alt='Ive' />
+          <img class='profile-img desktop' src='./public/ive-foto.webp' width='400' height='400' alt='Ive' />
         </div>
       </section>
       <section class='content' id='personal'>
@@ -93,8 +98,8 @@
         <article>
           <image-slider
             images='[
-              { "url": "./public/favico.webp", "alt": "image" },
-              { "url": "./public/ive-foto.webp", "alt": "image" }
+              { "url": "./public/ive-foto.webp", "alt": "imagem" },
+              { "url": "./public/ive-foto.webp", "alt": "Ive" }
             ]'
           >
           </image-slider>
@@ -111,7 +116,7 @@
               Nullam fringilla, felis et tempor fermentum, mauris justo facilisis lectus,
               eget sodales nibh ligula et dui.
             </p>
-            <a data-i18n='misc.source' href='' >Source Code</a>
+            <a href='' ><strong data-i18n='misc.source'></strong></a>
           </div>
         </article>
       </section>
@@ -132,21 +137,21 @@
         <p><span data-i18n='misc.updated'></span><time data-i18n='metrics.updated_at'></time></p>
         <section>
           <div>
-            <h3>LCP <span>1.2s</span><span class='desktop'>0.2s</span></h3>
+            <h3>LCP <span>1.1s</span><span class='desktop'>0.3s</span></h3>
             <details>
               <summary>Largest Contentful Paint</summary>
               <p data-i18n='metrics.lcp'></p>
             </details>
           </div>
           <div>
-            <h3>FCP <span>1.0s</span><span class='desktop'>0.2s</span></h3>
+            <h3>FCP <span>0.9s</span><span class='desktop'>0.2s</span></h3>
             <details>
               <summary>First Contentful Paint</summary>
               <p data-i18n='metrics.fcp'></p>
             </details>
           </div>
           <div>
-            <h3>CLS <span>0.0</span><span class='desktop'>0.141</span></h3>
+            <h3>CLS <span>0.0</span><span class='desktop'>0.0</span></h3>
             <details>
               <summary>Cumulative Layout Shift</summary>
               <p data-i18n='metrics.cls'></p>

@@ -105,7 +105,7 @@ function typeWriter() {
 
 document.body.addEventListener('load', typeWriter())
 
-const toggle = document.getElementById('input-toggle')
+const toggle = document.getElementById('slider-toggle')
 
 document.body.addEventListener('load', function() {
   const theme = window.localStorage.getItem('theme')
@@ -120,6 +120,7 @@ document.body.addEventListener('load', function() {
 }())
 
 toggle.addEventListener('click', () => {
+  document.getElementById('input-toggle').click()
   const theme = window.localStorage.getItem('theme')
   const isDark = theme === 'dark'
 
@@ -139,6 +140,7 @@ const ptFlag = document.getElementById('pt-br')
 function setPageLanguage() {
   i18nElements = document.querySelectorAll('[data-i18n]')
   const language = window.localStorage.getItem('language') || 'en'
+  document.querySelector('html').setAttribute('lang', language)
 
   if (language == 'en') {
     engFlag.style.setProperty('filter', 'grayscale(0%)');

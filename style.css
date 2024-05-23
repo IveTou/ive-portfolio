@@ -1,10 +1,10 @@
 body {
   --bg: #FFFF;
-  --bg-footer: #008244;
+  --bg-footer: #00532b;
   --font-color: #000;
   --font-color-footer: #fff;
-  --font-color-link: #008244;
-  --font-color-link-light: #34ff34;
+  --font-color-link: #00532b;
+  --font-color-link-light: #0f0;
 
   display: flex;
   height: 100vh;
@@ -13,23 +13,24 @@ body {
   margin: 0 auto;
   font-family: "Lucida Console", "Courier New", monospace;
   color: var(--font-color);
+  font-size: 1.2em;
 }
 
 .dark {
   --bg: #000;
-  --bg-footer: #008244;
+  --bg-footer: #00532b;
   --font-color: #FFF;
-  --font-color-link: #34ff34;
+  --font-color-link: #0f0;
 }
 
 main {
   display: flex;
   flex-flow: column;
   padding: 32px;
-  margin-top: 154px;
+  margin-top: 190px;
 
   @media only screen and (min-width: 768px) {
-    margin-top: 90px;
+    margin-top: 100px;
   }
 }
 
@@ -76,11 +77,11 @@ a:visited {
   background: inherit;
   align-items: center;
   box-shadow: 0 1px 4px grey;
-  height: 154px;
+  height: 190px;
   z-index: 10;
 
   @media only screen and (min-width: 768px) {
-    height: 90px;
+    height: 100px;
   }
 }
 
@@ -97,7 +98,7 @@ a:visited {
 .main-header-mobile {
   display: flex;
   justify-content: center;
-  height: 64px;
+  height: 100px;
   width: 100%;
   border-top: 1px solid gray;
 
@@ -121,6 +122,7 @@ a:visited {
 }
 
 .main-header a {
+  height: auto;
   color: inherit;
 }
 
@@ -166,9 +168,14 @@ nav {
 
 nav ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+}
+
+nav li {
+  padding: 8px 0;
 }
 
 nav ul a {
@@ -204,10 +211,6 @@ section article {
     grid-template-columns: 50% 50%;
     gap: 24px;
   }
-}
-
-section article figure {
-  width: 50%;
 }
 
 footer {
@@ -260,6 +263,10 @@ footer section:last-child {
 
 footer section:last-child p {
   text-align: center;
+}
+
+footer cite {
+  padding: 8px 0 24px;
 }
 
 footer a {
