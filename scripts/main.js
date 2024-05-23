@@ -54,7 +54,7 @@ const contentJson = {
   },
   metrics: {
     title: { en: 'Metrics', pt: 'Métricas'},
-    updated_at: { en: '21th May, 2024 ', pt: '21 de Maio, 2024'},
+    updated_at: { en: '23th May, 2024 ', pt: '23 de Maio, 2024'},
     lcp: {
       en: 'Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.',
       pt: 'Mede o desempenho de carregamento. Para fornecer uma boa experiência ao usuário, esforce-se para que o LCP ocorra nos primeiros 2,5 segundos após o início do carregamento da página.'
