@@ -43,6 +43,14 @@ const contentJson = {
   },
   about : {
     title: { en: 'About', pt: 'Sobre mim'},
+    content: {
+      en: `
+        Experienced Software Engineer with 7+ years of expertise in delivering high-quality solutions to companies. I help organizations optimize their digital presence and drive measurable results through my proficiency in cutting-edge technologies and strategic problem-solving.
+      `,
+      pt: `
+        Engenheiro de Software Experiente com mais de 7 anos de experiência em entregar soluções de alta qualidade para empresas. Ajudando organizações a otimizar sua presença digital e a obter resultados mensuráveis através da minha proficiência em tecnologias de ponta e resolução estratégica de problemas.
+      `
+    },
   },
   metrics: {
     title: { en: 'Metrics', pt: 'Métricas'},
@@ -77,7 +85,7 @@ var langRef
 function typeWriter() {
   const speed = 30;
   const language = window.localStorage.getItem('language') || 'en';
-  const element = document.getElementById('presentation')
+  const element = document.getElementById('about-content')
   /* clear state */
   if(language !== langRef) {
     langRef = language
@@ -86,7 +94,7 @@ function typeWriter() {
     element.innerHTML = ''
   }
 
-  const txt = contentJson.intro['title-greets'][language]
+  const txt = contentJson.about.content[language]
 
   if (i < txt.length) {
     element.innerHTML += txt.charAt(i);
@@ -95,7 +103,7 @@ function typeWriter() {
   }
 }
 
-// document.body.addEventListener('load', typeWriter())
+document.body.addEventListener('load', typeWriter())
 
 const toggle = document.getElementById('input-toggle')
 
@@ -158,7 +166,7 @@ function languageChangeHandler(e) {
   if(!lang) return
   window.localStorage.setItem('language', e.split('-')[0])
 
-  // typeWriter()
+  typeWriter()
   setPageLanguage()
 }
 

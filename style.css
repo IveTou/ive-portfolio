@@ -351,6 +351,10 @@ input:checked + .slider:before {
   text-align: center;
 }
 
+#about-content {
+  height: 200px;
+}
+
 .profile-img {
   border-radius: 50%;
   place-self: center;
