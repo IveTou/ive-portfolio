@@ -26,6 +26,11 @@ main {
   display: flex;
   flex-flow: column;
   padding: 32px;
+  margin-top: 154px;
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 90px;
+  }
 }
 
 h1, h2, h3 {
@@ -64,6 +69,7 @@ a:visited {
 }
 
 .main-header {
+  position: fixed;
   display: flex;
   flex-flow: column;
   width: 100%;
