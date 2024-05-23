@@ -2,7 +2,8 @@ const contentJson = {
   nav: {
     personal: { en: 'Personal', pt: 'Pessoal'},
     cases: { en: 'Cases', pt: 'Casos'},
-    tests: { en: 'Tests', pt: 'Desafios'}
+    tests: { en: 'Tests', pt: 'Desafios'},
+    about: { en: 'About', pt: 'Sobre mim'}
   },
   intro: {
     title: { en: 'Ive\'s developer page!', pt: 'Ive - Portifólio profissional'},
@@ -39,6 +40,9 @@ const contentJson = {
   },
   cases : {
     title: { en: 'Cases', pt: 'Casos'},
+  },
+  about : {
+    title: { en: 'About', pt: 'Sobre mim'},
   },
   metrics: {
     title: { en: 'Metrics', pt: 'Métricas'},
