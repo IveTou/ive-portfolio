@@ -54,7 +54,6 @@ const contentJson = {
   },
   metrics: {
     title: { en: 'Metrics', pt: 'Métricas'},
-    updated_at: { en: '23th May, 2024 ', pt: '23 de Maio, 2024'},
     lcp: {
       en: 'Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.',
       pt: 'Mede o desempenho de carregamento. Para fornecer uma boa experiência ao usuário, esforce-se para que o LCP ocorra nos primeiros 2,5 segundos após o início do carregamento da página.'
@@ -145,6 +144,18 @@ function setPageLanguage() {
     const [root, child] = index.split('.')
 
     ele.innerHTML = contentJson[root][child][language]
+  }
+
+  const updatedAt = document.querySelector('[data-cwv="updated-at"]')
+  if (updatedAt?.dateTime) {
+    const locale = language === 'pt' ? 'pt-BR' : 'en-GB'
+    const rawDate = updatedAt.dateTime.split('T')[0]
+    const [year, month, day] = rawDate.split('-').map(Number)
+    updatedAt.textContent = new Intl.DateTimeFormat(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    }).format(new Date(year, month - 1, day))
   }
 }
 

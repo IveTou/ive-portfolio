@@ -1,0 +1,51 @@
+name: Update Core Web Vitals
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: update-cwv
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-cwv:
+    if: ${{ !contains(github.event.head_commit.message, '[skip cwv]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Measure Core Web Vitals
+        run: npm run update-cwv
+
+      - name: Commit updated metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --staged --quiet; then
+            echo "No metric changes to commit."
+            exit 0
+          fi
+          git commit -m "$(cat <<'EOF'
+          chore: update core web vitals [skip cwv]
+
+          EOF
+          )"
+          git push

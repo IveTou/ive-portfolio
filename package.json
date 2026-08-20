@@ -1,0 +1,15 @@
+{
+  "name": "ive-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update-cwv": "node scripts/update-cwv.mjs"
+  },
+  "engines": {
+    "node": ">=18.16"
+  },
+  "devDependencies": {
+    "chrome-launcher": "^1.2.0",
+    "lighthouse": "^12.8.0"
+  }
+}
