@@ -1,8 +1,6 @@
 const contentJson = {
   nav: {
-    personal: { en: 'Personal', pt: 'Pessoal'},
-    cases: { en: 'Cases', pt: 'Casos'},
-    tests: { en: 'Tests', pt: 'Desafios'},
+    personal: { en: 'Featured and Personal', pt: 'Destaques e Pessoais'},
     about: { en: 'About', pt: 'Sobre mim'}
   },
   intro: {
@@ -33,13 +31,7 @@ const contentJson = {
     },
   },
   personal : {
-    title: { en: 'Personal Projects', pt: 'Projetos Pessoais'},
-  },
-  tests : {
-    title: { en: 'Coding Tests', pt: 'Desafios'},
-  },
-  cases : {
-    title: { en: 'Cases', pt: 'Casos'},
+    title: { en: 'Featured and Personal', pt: 'Destaques e Pessoais'},
   },
   about : {
     title: { en: 'About', pt: 'Sobre mim'},
@@ -54,7 +46,6 @@ const contentJson = {
   },
   metrics: {
     title: { en: 'Metrics', pt: 'Métricas'},
-    updated_at: { en: '23th May, 2024 ', pt: '23 de Maio, 2024'},
     lcp: {
       en: 'Measures loading performance. To provide a good user experience, strive to have LCP occur within the first 2.5 seconds of the page starting to load.',
       pt: 'Mede o desempenho de carregamento. Para fornecer uma boa experiência ao usuário, esforce-se para que o LCP ocorra nos primeiros 2,5 segundos após o início do carregamento da página.'
@@ -105,33 +96,21 @@ function typeWriter() {
 
 document.body.addEventListener('load', typeWriter())
 
-const toggle = document.getElementById('slider-toggle')
+const toggle = document.getElementById('input-toggle')
 
-document.body.addEventListener('load', function() {
-  const theme = window.localStorage.getItem('theme')
-
-  if (theme === 'dark') {
-    document.body.classList.add('dark')
-    toggle.checked = true;
-  } else {
-    document.body.classList.remove('dark')
-    toggle.checked = false;
-  }
-}())
-
-toggle.addEventListener('click', () => {
-  document.getElementById('input-toggle').click()
-  const theme = window.localStorage.getItem('theme')
+function applyTheme(theme) {
   const isDark = theme === 'dark'
+  document.body.classList.toggle('dark', isDark)
+  toggle.checked = isDark
+}
 
-  if (isDark) {
-    window.localStorage.setItem('theme', 'light')
-    document.body.classList.remove('dark')
-  } else {
-    window.localStorage.setItem('theme', 'dark')
-    document.body.classList.add('dark')
-  }
-});
+applyTheme(window.localStorage.getItem('theme'))
+
+toggle.addEventListener('change', () => {
+  const theme = toggle.checked ? 'dark' : 'light'
+  window.localStorage.setItem('theme', theme)
+  document.body.classList.toggle('dark', toggle.checked)
+})
 
 var i18nElements
 const engFlag = document.getElementById('en-us')
@@ -157,6 +136,18 @@ function setPageLanguage() {
     const [root, child] = index.split('.')
 
     ele.innerHTML = contentJson[root][child][language]
+  }
+
+  const updatedAt = document.querySelector('[data-cwv="updated-at"]')
+  if (updatedAt?.dateTime) {
+    const locale = language === 'pt' ? 'pt-BR' : 'en-GB'
+    const rawDate = updatedAt.dateTime.split('T')[0]
+    const [year, month, day] = rawDate.split('-').map(Number)
+    updatedAt.textContent = new Intl.DateTimeFormat(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    }).format(new Date(year, month - 1, day))
   }
 }
 

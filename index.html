@@ -33,8 +33,6 @@
             <div>
               <ul>
                 <li><a href='#personal' data-i18n='nav.personal'></a></li>
-                <li><a href='#cases' data-i18n='nav.cases'></a></li>
-                <li><a href='#tests' data-i18n='nav.tests'></a></li>
                 <li><a href='#about' data-i18n='nav.about'></a></li>
               </ul>
             </div>
@@ -56,8 +54,6 @@
           <div>
             <ul>
               <li><a href='#personal' data-i18n='nav.personal'></a></li>
-              <li><a href='#cases' data-i18n='nav.cases'></a></li>
-              <li><a href='#tests' data-i18n='nav.tests'></a></li>
               <li><a href='#about' data-i18n='nav.about'></a></li>
             </ul>
           </div>
@@ -120,12 +116,6 @@
           </div>
         </article>
       </section>
-      <section class='content' id='tests'>
-        <h2 data-i18n='tests.title'></h2>
-      </section>
-      <section class='content' id='cases'>
-        <h2 data-i18n='cases.title'></h2>
-      </section>
       <section class='content' id='about'>
         <h2 data-i18n='about.title'></h2>
         <div id='about-content'></div>
@@ -134,24 +124,24 @@
     <footer >
       <article class='content'>
         <h2 data-i18n='metrics.title'></h2>
-        <p><span data-i18n='misc.updated'></span><time data-i18n='metrics.updated_at'></time></p>
+        <p><span data-i18n='misc.updated'></span><time data-cwv='updated-at' datetime='2024-05-23'>23 May 2024</time></p>
         <section>
           <div>
-            <h3>LCP <span>1.1s</span><span class='desktop'>0.3s</span></h3>
+            <h3>LCP <span data-cwv='lcp-mobile'>1.1s</span><span class='desktop' data-cwv='lcp-desktop'>0.3s</span></h3>
             <details>
               <summary>Largest Contentful Paint</summary>
               <p data-i18n='metrics.lcp'></p>
             </details>
           </div>
           <div>
-            <h3>FCP <span>0.9s</span><span class='desktop'>0.2s</span></h3>
+            <h3>FCP <span data-cwv='fcp-mobile'>0.9s</span><span class='desktop' data-cwv='fcp-desktop'>0.2s</span></h3>
             <details>
               <summary>First Contentful Paint</summary>
               <p data-i18n='metrics.fcp'></p>
             </details>
           </div>
           <div>
-            <h3>CLS <span>0.0</span><span class='desktop'>0.0</span></h3>
+            <h3>CLS <span data-cwv='cls-mobile'>0.0</span><span class='desktop' data-cwv='cls-desktop'>0.0</span></h3>
             <details>
               <summary>Cumulative Layout Shift</summary>
               <p data-i18n='metrics.cls'></p>
