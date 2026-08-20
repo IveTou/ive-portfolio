@@ -1,8 +1,6 @@
 const contentJson = {
   nav: {
-    personal: { en: 'Personal', pt: 'Pessoal'},
-    cases: { en: 'Cases', pt: 'Casos'},
-    tests: { en: 'Tests', pt: 'Desafios'},
+    personal: { en: 'Featured and Personal', pt: 'Destaques e Pessoais'},
     about: { en: 'About', pt: 'Sobre mim'}
   },
   intro: {
@@ -33,13 +31,7 @@ const contentJson = {
     },
   },
   personal : {
-    title: { en: 'Personal Projects', pt: 'Projetos Pessoais'},
-  },
-  tests : {
-    title: { en: 'Coding Tests', pt: 'Desafios'},
-  },
-  cases : {
-    title: { en: 'Cases', pt: 'Casos'},
+    title: { en: 'Featured and Personal', pt: 'Destaques e Pessoais'},
   },
   about : {
     title: { en: 'About', pt: 'Sobre mim'},
